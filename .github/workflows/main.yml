@@ -26,6 +26,7 @@ jobs:
           python -m pip install --upgrade pip
           pip install -r requirements.txt
 
-      - name: Ejecutar pruebas
+      - name: Ejecutar pruebas con pytest
         run: |
-          pytest tests/ || echo "No hay pruebas aún"
+          pytest tests/ || echo "Las pruebas fallaron"
+
